@@ -1,0 +1,37 @@
+download and install the following 
+https://www.python.org/downloads/
+https://git-scm.com/downloads
+https://cmake.org/download/
+
+only download face_recognition_models from this git
+https://github.com/ageitgey/face_recognition_models
+
+after downloading models Create a folder structure like this inside your project folder(put face.py inside your project folder) :
+face_recognition_models/
+├── __init__.py
+└── models/
+    ├── mmod_human_face_detector.dat
+    ├── shape_predictor_68_face_landmarks.dat
+    ├── shape_predictor_5_face_landmarks.dat
+    ├── dlib_face_recognition_resnet_model_v1.dat
+
+
+Run these commands into your Terminal to install the necessary libraries:
+
+pip install opencv-python
+pip install opencv-contrib-python  
+pip install face_recognition
+
+Create a virtual environment:
+python -m venv face_env
+
+Activate the virtual environment:
+face_env\Scripts\activate
+
+edit this 4th line in face.py
+sys.path.append('/path/to/your/face_recognition_models folder')
+
+run your code 
+or write this in your terminal
+python face.py 
+
